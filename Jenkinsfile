@@ -4,7 +4,7 @@ pipeline {
     stage('npm install') {
       agent any
       steps {
-        sh 'echo npm install'
+        sh 'npm install'
       }
     }
     stage('npm test1') {
@@ -12,21 +12,21 @@ pipeline {
         stage('test 1') {
           agent any
           steps {
-            sh 'echo npm run test'
+            sh 'npm run test'
             sleep 5
           }
         }
         stage('test 2') {
           agent any
           steps {
-            sh 'echo npm run test'
+            sh 'npm run test'
             sleep 10
           }
         }
         stage('test 3') {
           agent any
           steps {
-            sh 'echo npm run test'
+            sh 'npm run test'
             sleep 7
           }
         }
@@ -35,7 +35,7 @@ pipeline {
     stage('docker build') {
       agent any
       steps {
-        sh 'echo docker build -t myapp .'
+        sh 'docker build -t npm-demo-app:latest .'
       }
     }
     stage('docker push') {
