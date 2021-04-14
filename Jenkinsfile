@@ -12,21 +12,21 @@ pipeline {
         stage('test 1') {
           agent any
           steps {
-            sh 'npm run test'
+            sh 'echo npm run test'
             sleep 5
           }
         }
         stage('test 2') {
           agent any
           steps {
-            sh 'npm run test'
+            sh 'echo npm run test'
             sleep 10
           }
         }
         stage('test 3') {
           agent any
           steps {
-            sh 'npm run test'
+            sh 'echo npm run test'
             sleep 7
           }
         }
